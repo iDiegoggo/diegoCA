@@ -1,0 +1,15 @@
+[Unit]
+Description=Servidor OCSP con OpenSSL
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/bash /home/dgarcia/diegoCA/scripts/ocsp.sh
+WorkingDirectory=/home/dgarcia/diegoCA/scripts
+StandardOutput=journal+console
+StandardError=journal+console
+Restart=always
+User=dgarcia
+
+[Install]
+WantedBy=multi-user.target
+
