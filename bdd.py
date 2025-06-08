@@ -56,7 +56,7 @@ with open(ruta_index, "r") as f:
         fecha_revocacion = partes[2] if estado_raw == "R" else None
         numero_serie = partes[3]
         sujeto = partes[5]
-        emisor = "diegoCA"  # valor fijo, ajustable si lo extraes
+        emisor = "diegoCA"  # valor fijo
         nombre_comun = extraer_cn(sujeto)
 
         # traducimos estado
